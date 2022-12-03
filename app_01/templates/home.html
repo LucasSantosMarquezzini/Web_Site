@@ -1,0 +1,151 @@
+{%load static%}
+
+<!DOCTYPE html>
+  <html>
+   <head>
+
+    <!-- Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <body>
+
+      <!-- Estático -->
+
+      <div class="navbar-fixed"> <!-- Barra de Navegação -->
+        <nav> 
+          <div class="nav-wrapper white z-depth-2 ">
+            <a href="#" class="brand-logo center">
+
+              <div class="container"> <!-- Logo -->
+                <img src="{% static '/img/Logo.png' %}" width="64" height="64" /> 
+             </div> <!-- Logo -->
+
+            </a> <!-- Opções Barra de Navegação -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down"> <!-- Direita -->
+              <li class="active">
+                <a href="" class="black-text">Home</a>
+              </li>
+              <li>
+                <a href="" class="black-text">Produtos</a>
+              </li>
+              <li>
+                <a href="{% url 'login' %}" class="black-text">Login</a>
+              </li>
+            </ul> <!-- Direita -->
+            <ul id="nav-mobile" class="left ride-on-med-and-down"> <!-- Esquerda -->
+              <li>
+                <a href="#" data-activates="slide-out" class="button-collapse black-text">
+                  <i  class="material-icons">person</i>> <!-- Esquerda -->
+                </a>
+              </li>
+            </ul>>
+          </div>
+        </nav>  
+      </div> <!-- Barra de Navegação --> 
+
+      <!-- Estático -->
+
+      <!-- Variável -->
+
+      <a href=""> <img  class="responsive-img" src="{% static '/img/Baner.jpg' %}"> </a> <!-- Baner -->
+
+      <br> <br> <br> 
+
+      <div class="row"> <!--Grids-->
+
+        <div class="col s12 white"> <!-- Grid Superior -->
+          <div class="col s12 white"> <!-- Grid Carrossel -->
+            <div class="carousel"><!-- Carrossel -->
+
+              <a class="carousel-item" href="#one!">
+                <img src="{% static '/img/Tenis_01.jpg' %}">
+              </a>
+              <a class="carousel-item" href="#two!">
+                <img src="{% static '/img/Tenis_02.jpg' %}">
+              </a>
+              <a class="carousel-item" href="#three!">
+                <img src="{% static '/img/Tenis_03.jpg' %}">
+              </a>
+              <a class="carousel-item" href="#Four!">
+                <img src="{% static '/img/Tenis_04.jpg' %}">
+              </a>
+              
+            </div> <!-- Carrossel -->
+          </div> <!-- Grid Carrossel -->
+        </div> <!-- Grid Superior -->
+
+      </div> <!--Grids-->     
+  
+      <!-- Variável -->
+
+      <!-- Estático -->
+
+      <footer class="page-footer white z-depth-2"> <!-- RodaPé -->
+        <div class="container">
+          <div class="row"> <!-- RodaPé Superior -->
+            <div class="col l6 s12">
+              <a href=""> <!-- Logo -->
+                <img src="{% static '/img/Logo.png '%}" class="center" width="128" height="128">
+              </a> <!-- Logo -->
+            </div>
+            <div class="col l4 offset-l2 s14">
+              <ul>
+                <li class="right" margin="">
+                  <a class="black-text" href="https://www.facebook.com/NewBalanceBrasil/">
+                    <img src="{% static '/img/facebook.png'%}" width="32" height="32">
+                  </a>
+                </li>
+                <li class="right">
+                  <a class="black-text" href="https://twitter.com/newbalance">
+                    <img src="{% static '/img/twitter.png'%}" width="32" height="32">
+                  </a>
+                </li>
+                <li class="right">
+                  <a class="black-text" href="https://www.instagram.com/newbalance/">
+                    <img src="{% static '/img/instagram.png'%}" width="32" height="32" >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- RodaPé Superior -->
+        <div class="footer-copyright black"> <!-- RodaPé Inferior -->
+          <div class="container">
+          © 2022 Copyright Text
+          </div>
+        </div> <!-- RodaPé Inferior -->
+      </footer> <!-- RodaPé -->
+
+      <!-- Estático -->
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      
+      <script> 
+        $(document).ready(function(){
+        $('.carousel').carousel({
+          padding: 10,
+          shift: 100,
+          dist: -10,
+        });
+        });
+
+        $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) {  }, // A function to be called when sideNav is opened
+      onClose: function(el) {  }, // A function to be called when sideNav is closed
+    }
+  );
+
+      </script>
+
+    </body>
+  </head>
+</html>
